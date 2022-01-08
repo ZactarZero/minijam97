@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Cup
   - BeerDrop
+  - Trail
   layers:
   - Default
   - TransparentFX
@@ -13,8 +14,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Interactable
+  - Table
   - 
   - 
   - 
