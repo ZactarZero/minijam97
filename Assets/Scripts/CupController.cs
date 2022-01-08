@@ -33,5 +33,9 @@ public class CupController : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
+
+    private void OnCollisionExit(Collision other) {
+        
+    }
     
 }

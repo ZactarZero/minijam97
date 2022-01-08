@@ -140,7 +140,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56f282fe66a532c46bcae07d3e7e87be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trailSpot: {fileID: 1763514727}
+  handSpot: {fileID: 1763514727}
+  objectInHand: {fileID: 0}
 --- !u!1001 &536540133
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -731,7 +732,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1763514727}
   m_Layer: 0
-  m_Name: TrailSpot
+  m_Name: HandSpot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -810,6 +811,10 @@ PrefabInstance:
     - target: {fileID: 1950509507093659665, guid: 2b92a8ec21d9cde4eb728a192de277d2, type: 3}
       propertyPath: m_Name
       value: Cup
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950509507093659665, guid: 2b92a8ec21d9cde4eb728a192de277d2, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b92a8ec21d9cde4eb728a192de277d2, type: 3}

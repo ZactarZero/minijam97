@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 7412011909915484472}
   - component: {fileID: 7412011909914615120}
   - component: {fileID: 7412011909912251542}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Table
-  m_TagString: Untagged
+  m_TagString: Table
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

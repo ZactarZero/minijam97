@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 928922294862948680}
   - component: {fileID: 5244823916788809263}
   - component: {fileID: -8503997037114009922}
+  - component: {fileID: -4333954061085385529}
   m_Layer: 0
   m_Name: BeerDrop
   m_TagString: BeerDrop
@@ -112,3 +113,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-4333954061085385529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38036650660232865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50482ee54772b8a4094e50eccd22b8d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

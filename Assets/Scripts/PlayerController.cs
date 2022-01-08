@@ -4,27 +4,51 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public Transform trailSpot;
+    public Transform handSpot;
+    public GameObject objectInHand = null;
 
     private Vector3 cameraCenter = new Vector3(0.5f, 0.5f, 0);
-    private Vector3 trailRotation = new Vector3(90f, 0f, 0);
-    // Start is called before the first frame update
+    
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         Ray ray = Camera.main.ViewportPointToRay(cameraCenter);
         RaycastHit hit;
         if (Input.GetMouseButtonDown(0)){
             if (Physics.Raycast(ray, out hit, 10f, LayerMask.GetMask("Interactable"))){
-                Debug.Log(hit.collider.name);
-                hit.collider.transform.SetParent(trailSpot);
-                hit.collider.transform.localPosition = Vector3.zero;
-                hit.collider.transform.localRotation = Quaternion.Euler(trailRotation);
+                if (objectInHand == null){
+                    if (hit.collider.CompareTag("Cup")){
+                        hit.collider.transform.SetParent(handSpot);
+                        hit.collider.transform.localPosition = Vector3.zero;
+                        hit.collider.transform.localRotation = Quaternion.identity;
+                        objectInHand = hit.collider.gameObject;
+                        hit.collider.GetComponent<Rigidbody>().isKinematic = true;
+                    } else if (hit.collider.CompareTag("Trail")){
+                        hit.collider.transform.SetParent(handSpot);
+                        hit.collider.transform.localPosition = Vector3.zero;
+                        hit.collider.transform.localRotation = Quaternion.identity;
+                        objectInHand = hit.collider.gameObject;
+                        hit.collider.GetComponent<Rigidbody>().isKinematic = true;
+                    }
+                } else {
+                    if (hit.collider.CompareTag("Table")){
+                        objectInHand.transform.SetParent(null);
+                        objectInHand.transform.position = hit.point;
+                        objectInHand.transform.rotation = Quaternion.identity;
+                        objectInHand.GetComponent<Rigidbody>().isKinematic = false;
+                        objectInHand = null;
+                    } else if (hit.collider.CompareTag("Trail") && objectInHand.CompareTag("Cup")){
+                        objectInHand.transform.SetParent(hit.collider.transform);
+                        objectInHand.transform.position = hit.point;
+                        objectInHand.transform.rotation = Quaternion.identity;
+                        objectInHand.GetComponent<Rigidbody>().isKinematic = false;
+                        objectInHand = null;
+                    }
+                }
             }
         }
     }
