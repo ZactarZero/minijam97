@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 5244823916788809263}
   - component: {fileID: -8503997037114009922}
   m_Layer: 0
-  m_Name: Gota
-  m_TagString: Untagged
+  m_Name: BeerDrop
+  m_TagString: BeerDrop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
