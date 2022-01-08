@@ -15,9 +15,7 @@ public class CupController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I)){
-            Fill();
-        }
+        
     }
 
     public void Fill(){
