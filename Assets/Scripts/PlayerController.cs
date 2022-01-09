@@ -38,9 +38,11 @@ public class PlayerController : MonoBehaviour
                         hit.collider.GetComponent<Rigidbody>().isKinematic = true;
                     } else if (hit.collider.CompareTag("Tap")) {
                         hit.collider.GetComponent<TapController>().Interact();
+                    } else if (hit.collider.CompareTag("Pia")) {
+                        hit.collider.GetComponent<PiaController>().Interact();
                     }
                 } else {
-                    if (hit.collider.CompareTag("Table") || hit.collider.CompareTag("Tap")){
+                    if (hit.collider.CompareTag("Table") || hit.collider.CompareTag("Tap") || hit.collider.CompareTag("Pia")){
                         objectInHand.transform.SetParent(null);
                         objectInHand.transform.position = hit.point;
                         objectInHand.transform.rotation = Quaternion.identity;

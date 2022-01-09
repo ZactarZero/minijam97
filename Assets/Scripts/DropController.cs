@@ -17,6 +17,6 @@ public class DropController : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision other) {
-        Destroy(gameObject, 1f);
+        Destroy(gameObject, 0.15f);
     }
 }

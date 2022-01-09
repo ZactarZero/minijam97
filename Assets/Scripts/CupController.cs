@@ -6,12 +6,22 @@ public class CupController : MonoBehaviour
 {
     public Transform beer;
     public bool hasBeer = false;
-    public AudioSource sound;
+    public bool isDirty = false;
+    public Material cleanMat;
+    public Material dirtyMat;
+    private Renderer mat;
+    private AudioSource sound;
 
     // Start is called before the first frame update
     void Start()
     {
         sound = GetComponent<AudioSource>();
+        foreach (Transform child in transform)
+        {
+            if (child.CompareTag("Glass")){
+                mat = child.GetComponent<Renderer>();
+            }
+        }
     }
 
     // Update is called once per frame
@@ -33,9 +43,19 @@ public class CupController : MonoBehaviour
         if (beer.localScale.z <= 0f) {
             beer.gameObject.SetActive(false);
             hasBeer = false;
+            isDirty = true;
+            mat.material = dirtyMat;
             return true;
         }
         return false;
+    }
+
+    public void Clean(){
+        beer.localScale = beer.localScale - Vector3.forward * beer.localScale.z;
+        beer.gameObject.SetActive(false);
+        hasBeer = false;
+        isDirty = false;
+        mat.material = cleanMat;
     }
 
     private void OnCollisionEnter(Collision other) {

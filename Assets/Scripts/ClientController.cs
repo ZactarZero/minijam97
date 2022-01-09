@@ -4,20 +4,22 @@ using UnityEngine;
 
 public class ClientController : MonoBehaviour
 {
+    public BarController barManager;
+
     private CupController watashiNoCupo;
     private WaitForSeconds beerNoTabeteCooldown = new WaitForSeconds(4f);
     private Vector3 spawnPoint;
     private ChairController chairUnderButt = null;
     private SphereCollider col;
+    private int timesConsumed = 0;
+    private bool cupWasDirty = false;
 
-    // Start is called before the first frame update
     void Start()
     {
         spawnPoint = transform.position;
         col = GetComponent<SphereCollider>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -46,6 +48,7 @@ public class ClientController : MonoBehaviour
             watashiNoCupo = other.GetComponent<CupController>();
             if (watashiNoCupo.hasBeer) {
                 StartCoroutine(ConsumeBeer());
+                cupWasDirty = watashiNoCupo.isDirty;
             } else {
                 watashiNoCupo = null;
             }
@@ -62,6 +65,7 @@ public class ClientController : MonoBehaviour
     IEnumerator ConsumeBeer(){
         while (true) {
             bool doneConsuming = watashiNoCupo.Consume();
+            timesConsumed += 1;
             if (doneConsuming) {
                 col.enabled = false;
                 chairUnderButt.isTaken = false;
@@ -76,7 +80,7 @@ public class ClientController : MonoBehaviour
                     lastWalkingTime = Time.time;
                     yield return null;
                 }
-
+                barManager.Pay(cupWasDirty ? timesConsumed * 0.20f : timesConsumed * 1f);
                 chairUnderButt = null;
                 Destroy(gameObject);
             }

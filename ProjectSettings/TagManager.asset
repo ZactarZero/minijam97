@@ -10,6 +10,8 @@ TagManager:
   - Table
   - Tap
   - Ground
+  - Glass
+  - Pia
   layers:
   - Default
   - TransparentFX

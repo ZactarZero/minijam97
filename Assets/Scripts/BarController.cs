@@ -1,22 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BarController : MonoBehaviour
 {
     public List<GameObject> clientPrefabs = new List<GameObject>();
     public List<ChairController> chairs = new List<ChairController>();
     public Transform spawnPoint;
+    public float money = 0f;
+    public Text moneyDisplay;
 
     private float lastSpawnTime = 0f;
     private float spawnTimeCooldown = 10f;
+
 
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Time.time >= lastSpawnTime + spawnTimeCooldown){
@@ -31,10 +34,16 @@ public class BarController : MonoBehaviour
                 }
             }
             if (availableChairs.Count > 0){
+                clientController.barManager = this;
                 StartCoroutine(clientController.GoSit(availableChairs[Random.Range(0, availableChairs.Count)]));
                 lastSpawnTime = Time.time;
                 spawnTimeCooldown = Random.Range(20f, 40f);
             }
         }
+    }
+
+    public void Pay(float amount){
+        money += amount;
+        moneyDisplay.text = $"$ {money}";
     }
 }
