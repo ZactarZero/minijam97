@@ -16,10 +16,13 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape)){
+            Application.Quit();
+        }
         Ray ray = Camera.main.ViewportPointToRay(cameraCenter);
         RaycastHit hit;
         if (Input.GetMouseButtonDown(0)){
-            if (Physics.Raycast(ray, out hit, 10f, LayerMask.GetMask("Interactable"))){
+            if (Physics.Raycast(ray, out hit, 2f, LayerMask.GetMask("Interactable"))){
                 if (objectInHand == null){
                     if (hit.collider.CompareTag("Cup")){
                         hit.collider.transform.SetParent(handSpot);

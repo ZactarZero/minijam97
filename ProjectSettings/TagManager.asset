@@ -9,6 +9,7 @@ TagManager:
   - Trail
   - Table
   - Tap
+  - Ground
   layers:
   - Default
   - TransparentFX
