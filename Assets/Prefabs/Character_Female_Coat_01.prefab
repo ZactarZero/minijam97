@@ -289,6 +289,7 @@ GameObject:
   - component: {fileID: 8655234938507922112}
   - component: {fileID: 8655234938515682200}
   - component: {fileID: 9099462639558300139}
+  - component: {fileID: -8512230084967551383}
   m_Layer: 0
   m_Name: Character_Female_Coat_01
   m_TagString: Untagged
@@ -351,6 +352,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a3a07dc6343edd4489d83f59f873ed5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!135 &-8512230084967551383
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8655234938508237484}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &8655234938508237558
 GameObject:
   m_ObjectHideFlags: 0

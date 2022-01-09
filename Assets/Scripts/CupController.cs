@@ -5,6 +5,7 @@ using UnityEngine;
 public class CupController : MonoBehaviour
 {
     public Transform beer;
+    public bool hasBeer = false;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +23,18 @@ public class CupController : MonoBehaviour
         if (beer.localScale.z < 600f){
             beer.gameObject.SetActive(true);
             beer.localScale = beer.localScale + Vector3.forward * 50f;
+            hasBeer = true;
         }
+    }
+
+    public bool Consume(){
+        beer.localScale = beer.localScale - Vector3.forward * 50f;
+        if (beer.localScale.z <= 0f) {
+            beer.gameObject.SetActive(false);
+            hasBeer = false;
+            return true;
+        }
+        return false;
     }
 
     private void OnCollisionEnter(Collision other) {

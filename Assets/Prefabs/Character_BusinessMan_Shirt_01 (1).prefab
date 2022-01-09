@@ -2522,6 +2522,7 @@ GameObject:
   - component: {fileID: 1122517983189667028}
   - component: {fileID: 1122517983199343258}
   - component: {fileID: 1324374601681949318}
+  - component: {fileID: 8305619528743279249}
   m_Layer: 0
   m_Name: Character_BusinessMan_Shirt_01 (1)
   m_TagString: Untagged
@@ -2584,6 +2585,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a3a07dc6343edd4489d83f59f873ed5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!135 &8305619528743279249
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122517983189990890}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &1122517983189991038
 GameObject:
   m_ObjectHideFlags: 0
