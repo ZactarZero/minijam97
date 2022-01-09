@@ -15,4 +15,21 @@ public class ClientController : MonoBehaviour
     {
         
     }
+
+    public IEnumerator GoSit(ChairController chair){
+        chair.isTaken = true;
+        transform.LookAt(chair.transform.position);
+        Vector3 startingPosition = transform.position;
+
+        float lastWalkingTime = Time.time;
+        float timeWalking = 0f;
+        while (timeWalking <= 2f){
+            transform.position = Vector3.Lerp(startingPosition, chair.transform.position, timeWalking/2f);
+            timeWalking += Time.time - lastWalkingTime;
+            lastWalkingTime = Time.time;
+            yield return null;
+        }
+        
+        transform.rotation = chair.transform.rotation;
+    }
 }

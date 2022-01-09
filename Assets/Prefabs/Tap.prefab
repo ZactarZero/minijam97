@@ -42,9 +42,12 @@ GameObject:
   - component: {fileID: 1985793412034896898}
   - component: {fileID: 2018824205517286606}
   - component: {fileID: 2018824205517286607}
-  m_Layer: 0
+  - component: {fileID: 5481654875430587090}
+  - component: {fileID: 5995522092234039970}
+  - component: {fileID: 2041722867163870179}
+  m_Layer: 6
   m_Name: Tap
-  m_TagString: Untagged
+  m_TagString: Tap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56,7 +59,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1208411910087048888}
-  m_LocalRotation: {x: -0, y: -0.7074746, z: -0, w: 0.7067389}
+  m_LocalRotation: {x: 0, y: -0.7074769, z: 0, w: 0.7067365}
   m_LocalPosition: {x: 0.332, y: 1.448, z: -0.724}
   m_LocalScale: {x: 0.28665838, y: 0.28665838, z: 0.28665838}
   m_Children:
@@ -100,6 +103,45 @@ MonoBehaviour:
   spawnPoint: {fileID: 2018824205788395634}
   beerDrop: {fileID: 38036650660232865, guid: 00c8724506af2f24ca900750884ef1c3, type: 3}
   isOpen: 0
+--- !u!65 &5481654875430587090
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208411910087048888}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3743656, y: 2.0035987, z: 1.2184327}
+  m_Center: {x: 0.31648642, y: 0.99606, z: 0.00461083}
+--- !u!65 &5995522092234039970
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208411910087048888}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.920069, y: 0.14923203, z: 1.2261142}
+  m_Center: {x: -0.54003537, y: 0.06280148, z: -0.005461053}
+--- !u!135 &2041722867163870179
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208411910087048888}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.48
+  m_Center: {x: -0.43, y: 2, z: 0}
 --- !u!1 &1695656280470450573
 GameObject:
   m_ObjectHideFlags: 0

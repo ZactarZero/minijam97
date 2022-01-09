@@ -8,6 +8,7 @@ TagManager:
   - BeerDrop
   - Trail
   - Table
+  - Tap
   layers:
   - Default
   - TransparentFX

@@ -17,9 +17,7 @@ public class TapController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.O)){
-            Interact();
-        }
+        
     }
 
     IEnumerator Pinga(){
