@@ -1633,6 +1633,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7553720079284160119, guid: 3d69b164ae19c6045ba7b9f48ade2036, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 09f2c9f00b9622b49854d03a4ff710da, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d69b164ae19c6045ba7b9f48ade2036, type: 3}
 --- !u!4 &313341529 stripped
@@ -2730,19 +2734,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7673235279194038165, guid: 1dd1cdf1e1134de4c8f85fba81f1012e, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.38268322
       objectReference: {fileID: 0}
     - target: {fileID: 7673235279194038165, guid: 1dd1cdf1e1134de4c8f85fba81f1012e, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7673235279194038165, guid: 1dd1cdf1e1134de4c8f85fba81f1012e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.9238797
       objectReference: {fileID: 0}
     - target: {fileID: 7673235279194038165, guid: 1dd1cdf1e1134de4c8f85fba81f1012e, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7673235279194038165, guid: 1dd1cdf1e1134de4c8f85fba81f1012e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2750,7 +2754,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7673235279194038165, guid: 1dd1cdf1e1134de4c8f85fba81f1012e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 135
       objectReference: {fileID: 0}
     - target: {fileID: 7673235279194038165, guid: 1dd1cdf1e1134de4c8f85fba81f1012e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -3416,6 +3420,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7553720079284160119, guid: 3d69b164ae19c6045ba7b9f48ade2036, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 09f2c9f00b9622b49854d03a4ff710da, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d69b164ae19c6045ba7b9f48ade2036, type: 3}
 --- !u!1 &871368138 stripped
@@ -3665,7 +3673,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 09f2c9f00b9622b49854d03a4ff710da, type: 2}
+  - {fileID: 2100000, guid: 666ea02f0faac854cb4c2de122a3dad2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3911,7 +3919,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 968159543}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -3.5094852, y: -0.15516227, z: 6.2089014}
+  m_LocalPosition: {x: -3.519, y: -0.15516227, z: 6.227}
   m_LocalScale: {x: 4.2, y: 1.2, z: 0.5}
   m_Children: []
   m_Father: {fileID: 180915044}
@@ -4272,6 +4280,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3065698688924677118, guid: 62de82aee89ef3f4aa01e14f8991d181, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 09f2c9f00b9622b49854d03a4ff710da, type: 2}
     - target: {fileID: 3570071128734159403, guid: 62de82aee89ef3f4aa01e14f8991d181, type: 3}
       propertyPath: m_Name
       value: Trail
@@ -7154,6 +7166,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3065698688924677118, guid: 62de82aee89ef3f4aa01e14f8991d181, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 09f2c9f00b9622b49854d03a4ff710da, type: 2}
     - target: {fileID: 3570071128734159403, guid: 62de82aee89ef3f4aa01e14f8991d181, type: 3}
       propertyPath: m_Name
       value: Trail (1)
@@ -7588,7 +7604,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 09f2c9f00b9622b49854d03a4ff710da, type: 2}
+  - {fileID: 2100000, guid: 666ea02f0faac854cb4c2de122a3dad2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7978,6 +7994,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7553720079284160119, guid: 3d69b164ae19c6045ba7b9f48ade2036, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 09f2c9f00b9622b49854d03a4ff710da, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d69b164ae19c6045ba7b9f48ade2036, type: 3}
 --- !u!1001 &2049941878
