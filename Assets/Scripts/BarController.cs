@@ -10,9 +10,13 @@ public class BarController : MonoBehaviour
     public Transform spawnPoint;
     public float money = 0f;
     public Text moneyDisplay;
+    public Slider popularityDisplay;
+    public GameObject gameOverScreen;
+    public float popularity = 1f;
 
     private float lastSpawnTime = 0f;
     private float spawnTimeCooldown = 10f;
+    private bool gameIsStillGoing = true;
 
 
     void Start()
@@ -22,7 +26,7 @@ public class BarController : MonoBehaviour
 
     void Update()
     {
-        if (Time.time >= lastSpawnTime + spawnTimeCooldown){
+        if (Time.time >= lastSpawnTime + spawnTimeCooldown && gameIsStillGoing){
             GameObject clientPrefab = clientPrefabs[Random.Range(0, clientPrefabs.Count)];
             GameObject client = Instantiate(clientPrefab, spawnPoint.position, Quaternion.identity);
             ClientController clientController = client.GetComponent<ClientController>();
@@ -37,8 +41,20 @@ public class BarController : MonoBehaviour
                 clientController.barManager = this;
                 StartCoroutine(clientController.GoSit(availableChairs[Random.Range(0, availableChairs.Count)]));
                 lastSpawnTime = Time.time;
-                spawnTimeCooldown = Random.Range(20f, 40f);
+                spawnTimeCooldown = Random.Range(5f, 20f);
             }
+        }
+    }
+
+    public void ChangePopularity(float amount){
+        popularity += amount;
+        popularity = popularity > 1f ? 1f : popularity;
+        popularityDisplay.value = popularity;
+
+        if (popularity <= 0f) {
+            Time.timeScale = 0f;
+            gameIsStillGoing = false;
+            gameOverScreen.SetActive(true);
         }
     }
 
